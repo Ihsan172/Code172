@@ -1,0 +1,855 @@
+[gd_scene load_steps=52 format=2]
+
+[ext_resource path="res://Assets/Icons/save.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Icons/file.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Icons/open.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Icons/save_as.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Icons/credits.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Icons/settings.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Icons/close.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Scripts/main.gd" type="Script" id=8]
+[ext_resource path="res://Assets/Fonts/DroidSansMono.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://Assets/Fonts/NotoSans.ttf" type="DynamicFontData" id=10]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.145098, 0.145098, 0.14902, 1 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=8]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=9]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=10]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=11]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=38]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=41]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 14
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=39]
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=40]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=12]
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.145098, 0.145098, 0.14902, 1 )
+
+[sub_resource type="DynamicFont" id=13]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=14]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=15]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=16]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=17]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=18]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=19]
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.145098, 0.145098, 0.14902, 1 )
+
+[sub_resource type="DynamicFont" id=20]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=21]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=22]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=23]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=24]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=25]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=26]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=27]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=28]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=29]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=30]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=31]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=32]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=33]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=34]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=35]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=36]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=37]
+font_data = ExtResource( 10 )
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 8 )
+
+[node name="ToolBar" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.053
+margin_bottom = 1.84
+custom_styles/panel = SubResource( 1 )
+
+[node name="Container" type="HBoxContainer" parent="ToolBar"]
+anchor_left = 0.002
+anchor_top = 0.01
+anchor_right = 0.998
+anchor_bottom = 0.977
+margin_left = -0.56
+margin_top = 1.6
+margin_right = -0.432129
+margin_bottom = 1.57132
+alignment = 1
+
+[node name="New" type="Button" parent="ToolBar/Container"]
+margin_left = 338.0
+margin_right = 410.0
+margin_bottom = 38.0
+hint_tooltip = "Create a new file. (Ctrl+N)"
+custom_fonts/font = SubResource( 5 )
+text = "New"
+icon = ExtResource( 2 )
+
+[node name="Open" type="Button" parent="ToolBar/Container"]
+margin_left = 414.0
+margin_right = 494.0
+margin_bottom = 38.0
+hint_tooltip = "Open an existing file. (Ctrl+O)"
+custom_fonts/font = SubResource( 6 )
+text = "Open"
+icon = ExtResource( 3 )
+
+[node name="Save" type="Button" parent="ToolBar/Container"]
+margin_left = 498.0
+margin_right = 571.0
+margin_bottom = 38.0
+hint_tooltip = "Save changes to your current file. (Ctrl+S)"
+custom_fonts/font = SubResource( 7 )
+text = "Save"
+icon = ExtResource( 1 )
+
+[node name="SaveAs" type="Button" parent="ToolBar/Container"]
+margin_left = 575.0
+margin_right = 670.0
+margin_bottom = 38.0
+hint_tooltip = "Save your text as a new file or overwrite one. (Shift+Ctrl+S)"
+custom_fonts/font = SubResource( 8 )
+text = "Save As"
+icon = ExtResource( 4 )
+
+[node name="Settings" type="Button" parent="ToolBar/Container"]
+margin_left = 674.0
+margin_right = 774.0
+margin_bottom = 38.0
+hint_tooltip = "Open the settings menu. (F3)"
+custom_fonts/font = SubResource( 9 )
+text = "Settings"
+icon = ExtResource( 6 )
+
+[node name="About" type="Button" parent="ToolBar/Container"]
+margin_left = 778.0
+margin_right = 862.0
+margin_bottom = 38.0
+hint_tooltip = "About IE Code."
+custom_fonts/font = SubResource( 10 )
+text = "About"
+icon = ExtResource( 5 )
+
+[node name="Quit" type="Button" parent="ToolBar/Container"]
+margin_left = 866.0
+margin_right = 937.0
+margin_bottom = 38.0
+hint_tooltip = "Close the application. (Alt+F4)"
+custom_fonts/font = SubResource( 11 )
+text = "Quit"
+icon = ExtResource( 7 )
+
+[node name="QuickNote" type="Button" parent="ToolBar"]
+margin_left = 5.0
+margin_top = 6.0
+margin_right = 98.0
+margin_bottom = 35.0
+hint_tooltip = "A simple notepad for quick notes that will be
+reseted after closing the application. (Ctrl+Q)"
+custom_fonts/font = SubResource( 38 )
+text = "QuickNote"
+
+[node name="Time" type="Label" parent="ToolBar"]
+margin_left = 1211.0
+margin_top = 8.0
+margin_right = 1275.0
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 41 )
+text = "00:00:00"
+align = 1
+valign = 1
+
+[node name="TextEdit" type="TextEdit" parent="."]
+anchor_top = 0.053
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.84
+custom_colors/breakpoint_color = Color( 1, 0.470588, 0.419608, 1 )
+custom_colors/line_number_color = Color( 0.588235, 0.784314, 0.568627, 1 )
+custom_colors/background_color = Color( 0.117647, 0.117647, 0.117647, 1 )
+custom_colors/number_color = Color( 0.631373, 1, 0.878431, 1 )
+custom_fonts/font = SubResource( 2 )
+highlight_current_line = true
+syntax_highlighting = true
+show_line_numbers = true
+draw_tabs = true
+breakpoint_gutter = true
+fold_gutter = true
+highlight_all_occurrences = true
+smooth_scrolling = true
+minimap_draw = true
+
+[node name="QuickNote" type="WindowDialog" parent="."]
+anchor_right = 0.273
+anchor_bottom = 0.486
+margin_right = 0.559998
+margin_bottom = 0.0799866
+custom_fonts/title_font = SubResource( 39 )
+popup_exclusive = true
+window_title = "QuickNote"
+resizable = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="QuickNote"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 40 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OpenFile" type="FileDialog" parent="."]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 1230.0
+margin_bottom = 670.0
+mouse_default_cursor_shape = 2
+window_title = "Open a File"
+resizable = true
+mode = 0
+access = 2
+show_hidden_files = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaveFileAs" type="FileDialog" parent="."]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 1230.0
+margin_bottom = 670.0
+mouse_default_cursor_shape = 2
+window_title = "Save File As"
+access = 2
+show_hidden_files = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SavedDialog" type="AcceptDialog" parent="."]
+margin_left = 500.0
+margin_top = 300.0
+margin_right = 700.0
+margin_bottom = 360.0
+rect_scale = Vector2( 1.2, 1.2 )
+window_title = "Saved"
+dialog_text = "Saved successfully!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ConfirmQuit" type="ConfirmationDialog" parent="."]
+margin_right = 224.0
+margin_bottom = 75.0
+rect_scale = Vector2( 1.2, 1.2 )
+dialog_text = "All unsaved changes will be lost.
+Continue anyway?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ConfirmNewFile" type="ConfirmationDialog" parent="."]
+margin_right = 83.0
+margin_bottom = 58.0
+rect_scale = Vector2( 1.2, 1.2 )
+dialog_text = "All unsaved changes will be lost.
+Continue anyway?"
+
+[node name="About" type="WindowDialog" parent="."]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 1230.0
+margin_bottom = 670.0
+custom_fonts/title_font = SubResource( 12 )
+window_title = "About Code172"
+
+[node name="Background" type="Panel" parent="About"]
+margin_right = 1180.0
+margin_bottom = 620.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabContainer" type="TabContainer" parent="About"]
+margin_right = 1180.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Info" type="Tabs" parent="About/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+custom_fonts/font = SubResource( 13 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="About/TabContainer/Info"]
+margin_top = 35.0
+margin_right = 1172.5
+margin_bottom = 584.0
+custom_fonts/normal_font = SubResource( 14 )
+text = "Code172 v2.0 (2023-01-08)
+A simple and lightweight code editor made with Godot.
+© 2021-2023 Ihsan172. Licensed under the MIT License.
+
+Godot version: 3.5.1 (2022-09-28)
+
+-> itch.io
+-> GitHub
+-> Report Bug"
+
+[node name="itch_io" type="TextureButton" parent="About/TabContainer/Info"]
+margin_top = 181.5
+margin_right = 103.0
+margin_bottom = 201.5
+
+[node name="GitHub" type="TextureButton" parent="About/TabContainer/Info"]
+margin_top = 205.5
+margin_right = 103.0
+margin_bottom = 225.5
+hint_tooltip = "https://github.com/Ihsan-Entertainment/IE-Code"
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReportBug" type="TextureButton" parent="About/TabContainer/Info"]
+margin_top = 230.5
+margin_right = 103.0
+margin_bottom = 250.5
+hint_tooltip = "https://github.com/Ihsan-Entertainment/IE-Code/issues/new
+GitHub account required"
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Third-Party" type="Tabs" parent="About/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+custom_fonts/font = SubResource( 15 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="About/TabContainer/Third-Party"]
+margin_top = 35.0
+margin_right = 1172.0
+margin_bottom = 584.0
+custom_fonts/normal_font = SubResource( 16 )
+text = "This software uses Godot Engine, available under the MIT License.
+© 2007-2022 Juan Linietsky, Ariel Manzur.
+© 2014-2022 Godot Engine contributors.
+
+Icons by Remix Icon
+© 2020 Remix Design.
+Licensed under the Apache License 2.0.
+
+Font: Noto Sans
+© 2012 Google Inc. All Rights Reserved.
+Licensed under the SIL Open Font License 1.1.
+
+Code Font: Droid Sans Mono
+© 2007 Ascender Corp.
+Licensed under the Apache License 2.0."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Licenses" type="Tabs" parent="About/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+custom_fonts/font = SubResource( 17 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="About/TabContainer/Licenses"]
+margin_top = 35.0
+margin_right = 1172.0
+margin_bottom = 584.0
+custom_fonts/normal_font = SubResource( 18 )
+text = "MIT License
+
+Copyright <YEAR> <COPYRIGHT HOLDER>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+####################################################################################################
+
+
+Apache License 2.0
+
+Copyright [yyyy] [name of copyright owner]
+
+Licensed under the Apache License, Version 2.0 (the \"License\");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an \"AS IS\" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+
+####################################################################################################
+
+
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded, 
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.
+
+DEFINITIONS
+\"Font Software\" refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+\"Reserved Font Name\" refers to any names specified as such after the
+copyright statement(s).
+
+\"Original Version\" refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).
+
+\"Modified Version\" refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.
+
+\"Author\" refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+PERMISSION & CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5) The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Settings" type="WindowDialog" parent="."]
+margin_left = 25.0
+margin_top = 50.0
+margin_right = 1205.0
+margin_bottom = 670.0
+rect_scale = Vector2( 1.05, 1.05 )
+custom_fonts/title_font = SubResource( 19 )
+window_title = "Settings"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Panel" parent="Settings"]
+margin_right = 1180.0
+margin_bottom = 620.0
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabContainer" type="TabContainer" parent="Settings"]
+margin_right = 1180.0
+margin_bottom = 60.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Window" type="Tabs" parent="Settings/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+custom_fonts/font = SubResource( 20 )
+
+[node name="Borderless" type="CheckButton" parent="Settings/TabContainer/Window"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 40.0
+margin_right = -586.0
+margin_bottom = 56.0
+hint_tooltip = "Forces the window to be borderless."
+custom_fonts/font = SubResource( 21 )
+text = "Borderless"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KeepScreenOn" type="CheckButton" parent="Settings/TabContainer/Window"]
+margin_left = 586.0
+margin_top = 40.0
+margin_right = 1172.0
+margin_bottom = 80.0
+hint_tooltip = "If enabled, keeps the screen on (even in case of
+inactivity), so the screen saver does not take over."
+custom_fonts/font = SubResource( 22 )
+pressed = true
+text = "Keep Screen On"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resizable" type="CheckButton" parent="Settings/TabContainer/Window"]
+margin_top = 80.0
+margin_right = 586.0
+margin_bottom = 120.0
+hint_tooltip = "Allows the window to be resizable by default."
+custom_fonts/font = SubResource( 23 )
+pressed = true
+text = "Resizable"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fullscreen" type="CheckButton" parent="Settings/TabContainer/Window"]
+margin_left = 586.0
+margin_top = 80.0
+margin_right = 1172.0
+margin_bottom = 120.0
+hint_tooltip = "Sets the window to full screen. (F12; Esc to exit)
+
+Enabling fullscreen will change the
+window size to the monitor's size."
+custom_fonts/font = SubResource( 24 )
+text = "Fullscreen"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="Tabs" parent="Settings/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+custom_fonts/font = SubResource( 25 )
+
+[node name="HighlightCurrentLine" type="CheckButton" parent="Settings/TabContainer/TextEdit"]
+margin_top = 40.0
+margin_right = 586.0
+margin_bottom = 80.0
+hint_tooltip = "If enabled, the line containing the cursor is
+highlighted."
+custom_fonts/font = SubResource( 26 )
+pressed = true
+text = "Highlight Current Line"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SyntaxHighlighting" type="CheckButton" parent="Settings/TabContainer/TextEdit"]
+margin_left = 586.0
+margin_top = 40.0
+margin_right = 1172.0
+margin_bottom = 80.0
+hint_tooltip = "If enabled, any custom colour properties that have been
+set for the TextEdit will be visible."
+custom_fonts/font = SubResource( 27 )
+pressed = true
+text = "Syntax Highlighting"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HighligtAllOccurrences" type="CheckButton" parent="Settings/TabContainer/TextEdit"]
+margin_top = 80.0
+margin_right = 586.0
+margin_bottom = 120.0
+hint_tooltip = "If enabled, all occurrences of the selected text will be
+highlighted."
+custom_fonts/font = SubResource( 28 )
+pressed = true
+text = "Highlight All Occurrences"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineNumbers" type="CheckButton" parent="Settings/TabContainer/TextEdit"]
+margin_left = 586.0
+margin_top = 80.0
+margin_right = 1172.0
+margin_bottom = 120.0
+hint_tooltip = "If enabled, line numbers are displayed to the left of
+the text."
+custom_fonts/font = SubResource( 29 )
+pressed = true
+text = "Show Line Numbers"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DrawTabs" type="CheckButton" parent="Settings/TabContainer/TextEdit"]
+margin_top = 120.0
+margin_right = 586.0
+margin_bottom = 160.0
+hint_tooltip = "If enabled, the \"tab\" character will have a visible
+representation."
+custom_fonts/font = SubResource( 30 )
+pressed = true
+text = "Draw Tabs"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DrawSpaces" type="CheckButton" parent="Settings/TabContainer/TextEdit"]
+margin_left = 586.0
+margin_top = 120.0
+margin_right = 1172.0
+margin_bottom = 160.0
+hint_tooltip = "If enabled, the \"space\" character will have a visible
+representation."
+custom_fonts/font = SubResource( 31 )
+text = "Draw Spaces"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BreakpointGutter" type="CheckButton" parent="Settings/TabContainer/TextEdit"]
+margin_top = 160.0
+margin_right = 586.0
+margin_bottom = 200.0
+hint_tooltip = "If enabled, the breakpoint gutter is visible."
+custom_fonts/font = SubResource( 32 )
+pressed = true
+text = "Breakpoint Gutter"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FoldGutter" type="CheckButton" parent="Settings/TabContainer/TextEdit"]
+margin_left = 586.0
+margin_top = 160.0
+margin_right = 1172.0
+margin_bottom = 200.0
+hint_tooltip = "If enabled, the fold gutter is visible. This enables
+folding groupes of intented lines."
+custom_fonts/font = SubResource( 33 )
+pressed = true
+text = "Fold Gutter"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SmoothScrolling" type="CheckButton" parent="Settings/TabContainer/TextEdit"]
+margin_top = 200.0
+margin_right = 586.0
+margin_bottom = 240.0
+hint_tooltip = "If enabled, sets the step of the scrollbar to 0.25
+which results in smoother scrolling."
+custom_fonts/font = SubResource( 34 )
+pressed = true
+text = "Smooth Scrolling"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Minimap" type="CheckButton" parent="Settings/TabContainer/TextEdit"]
+margin_left = 586.0
+margin_top = 200.0
+margin_right = 1172.0
+margin_bottom = 240.0
+hint_tooltip = "If enabled, a minimap is shown, providing an outline
+of your code."
+custom_fonts/font = SubResource( 35 )
+pressed = true
+text = "Minimap"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AutoSave" type="Tabs" parent="Settings/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+custom_fonts/font = SubResource( 36 )
+
+[node name="AutoSaving" type="CheckButton" parent="Settings/TabContainer/AutoSave"]
+margin_top = 40.0
+margin_right = 586.0
+margin_bottom = 80.0
+hint_tooltip = "If enabled, changes to the current file will be saved in real time. 
+Requires that the file already exists and is saved somewhere."
+custom_fonts/font = SubResource( 37 )
+text = "Automatic Saving"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="ToolBar/Container/New" to="." method="new_file_button"]
+[connection signal="pressed" from="ToolBar/Container/Open" to="." method="open_file_button"]
+[connection signal="pressed" from="ToolBar/Container/Save" to="." method="save_file_button"]
+[connection signal="pressed" from="ToolBar/Container/SaveAs" to="." method="save_file_as_button"]
+[connection signal="pressed" from="ToolBar/Container/Settings" to="." method="settings_button"]
+[connection signal="pressed" from="ToolBar/Container/About" to="." method="about_button"]
+[connection signal="pressed" from="ToolBar/Container/Quit" to="." method="quit_button"]
+[connection signal="pressed" from="ToolBar/QuickNote" to="." method="quicknote"]
+[connection signal="file_selected" from="OpenFile" to="." method="open_file"]
+[connection signal="file_selected" from="SaveFileAs" to="." method="save_file_as"]
+[connection signal="confirmed" from="ConfirmQuit" to="." method="confirm_quit"]
+[connection signal="confirmed" from="ConfirmNewFile" to="." method="new_file"]
+[connection signal="pressed" from="About/TabContainer/Info/itch_io" to="." method="itch_io"]
+[connection signal="pressed" from="About/TabContainer/Info/GitHub" to="." method="github"]
+[connection signal="pressed" from="About/TabContainer/Info/ReportBug" to="." method="report_bug"]
