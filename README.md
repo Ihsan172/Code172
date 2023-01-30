@@ -1,5 +1,5 @@
 # Code172
-<p>Code172 is a simple and lightweight code editor made with Godot. It has a clean and easy-to-use UI and is also very resource friendly. The source code is available on <a href="https://github.com/Ihsan172/Code172" target="_blank">GitHub</a>.</p>
+<p>Code172 is a simple and lightweight code editor made with Godot. It has a clean and easy-to-use UI and is also very resource friendly.
 <h4></h4>
 <h3>Features</h3>
 <ul><li>Borderless Window</li><li>Resizable Window (On/Off)</li><li>Keep Screen On</li><li>Fullscreen</li></ul>
