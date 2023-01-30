@@ -2,6 +2,8 @@ extends Control
 
 
 var current_path = 'no path set'
+var saved_code = ""
+var saved = 0
 
 
 func _process(delta):
@@ -11,6 +13,7 @@ func _process(delta):
 	window_settings()
 	textedit_settings()
 	time()
+	unsaved_changes()
 
 
 func time():
@@ -82,6 +85,8 @@ func autosave():
 		file.open(current_path, 2)
 		file.store_string($TextEdit.text)
 
+	saved_code = $TextEdit.text
+
 
 func settings_button():
 	$Settings.popup_centered()
@@ -94,10 +99,14 @@ func quicknote():
 func new_file():
 	$TextEdit.text = ''
 	current_path = 'no path set'
+	saved_code = $TextEdit.text
 
 
 func new_file_button():
-	$ConfirmNewFile.popup_centered()
+	if saved == false:
+		$ConfirmNewFile.popup_centered()
+	else:
+		new_file()
 
 
 func open_file(path):
@@ -105,6 +114,8 @@ func open_file(path):
 	file.open(path, 1)
 	current_path = path
 	$TextEdit.text = file.get_as_text()
+
+	saved_code = $TextEdit.text
 
 
 func open_file_button():
@@ -118,7 +129,7 @@ func save_file_button():
 		var file = File.new()
 		file.open(current_path, 2)
 		file.store_string($TextEdit.text)
-		$SavedDialog.popup_centered()
+		saved_code = $TextEdit.text
 
 
 func save_file_as(path):
@@ -126,6 +137,9 @@ func save_file_as(path):
 	file.open(path, 2)
 	file.store_string($TextEdit.text)
 	current_path = path
+	saved_code = $TextEdit.text
+	
+	$SavedDialog.dialog_text = "Saved succefully in " + current_path
 	$SavedDialog.popup_centered()
 
 
@@ -138,7 +152,10 @@ func about_button():
 
 
 func quit_button():
-	$ConfirmQuit.popup_centered()
+	if saved == false:
+		$ConfirmQuit.popup_centered()
+	else:
+		confirm_quit()
 
 
 func confirm_quit():
@@ -155,3 +172,14 @@ func github():
 
 func report_bug():
 	OS.shell_open('https://github.com/Ihsan172/Code172/issues/new')
+
+
+func unsaved_changes():
+	if $TextEdit.text == saved_code:
+		$ToolBar/UnsavedChanges.play("Saved")
+		$ToolBar/UnsavedChanges/Hint.hint_tooltip = "No unsaved changes"
+		saved = true
+	else:
+		$ToolBar/UnsavedChanges.play("Unsaved")
+		$ToolBar/UnsavedChanges/Hint.hint_tooltip = "Unsaved changes"
+		saved = false
