@@ -10,8 +10,8 @@
 [ext_resource path="res://Assets/Scripts/main.gd" type="Script" id=8]
 [ext_resource path="res://Assets/Fonts/DroidSansMono.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://Assets/Fonts/NotoSans.ttf" type="DynamicFontData" id=10]
-[ext_resource path="res://Assets/Icons/no_unsaved_changes.png" type="Texture" id=11]
-[ext_resource path="res://Assets/Icons/unsaved_changes.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Icons/saved.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Icons/unsaved.png" type="Texture" id=12]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.145098, 0.145098, 0.14902, 1 )
@@ -40,17 +40,17 @@ font_data = ExtResource( 10 )
 [sub_resource type="DynamicFont" id=38]
 font_data = ExtResource( 10 )
 
-[sub_resource type="SpriteFrames" id=42]
+[sub_resource type="SpriteFrames" id=44]
 animations = [ {
 "frames": [ ExtResource( 11 ) ],
 "loop": false,
-"name": "Saved",
-"speed": 0.0
+"name": "saved",
+"speed": 1.0
 }, {
 "frames": [ ExtResource( 12 ) ],
-"loop": true,
-"name": "Unsaved",
-"speed": 5.0
+"loop": false,
+"name": "unsaved",
+"speed": 1.0
 } ]
 
 [sub_resource type="StyleBoxEmpty" id=43]
@@ -248,12 +248,12 @@ reseted after closing the application. (Ctrl+Q)"
 custom_fonts/font = SubResource( 38 )
 text = "QuickNote"
 
-[node name="UnsavedChanges" type="AnimatedSprite" parent="ToolBar"]
+[node name="ChangeDetector" type="AnimatedSprite" parent="ToolBar"]
 position = Vector2( 1170, 20 )
-frames = SubResource( 42 )
-animation = "Unsaved"
+frames = SubResource( 44 )
+animation = "saved"
 
-[node name="Hint" type="Panel" parent="ToolBar/UnsavedChanges"]
+[node name="Hint" type="Panel" parent="ToolBar/ChangeDetector"]
 margin_left = -12.5
 margin_top = -12.5
 margin_right = 12.5
@@ -340,16 +340,10 @@ __meta__ = {
 }
 
 [node name="SavedDialog" type="AcceptDialog" parent="."]
-margin_left = 500.0
-margin_top = 300.0
-margin_right = 700.0
-margin_bottom = 360.0
+margin_right = 200.0
+margin_bottom = 58.0
 rect_scale = Vector2( 1.2, 1.2 )
-window_title = "Saved"
-dialog_text = "Saved successfully!"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+window_title = "Saved successfully!"
 
 [node name="ConfirmQuit" type="ConfirmationDialog" parent="."]
 margin_right = 224.0
@@ -405,7 +399,7 @@ margin_top = 35.0
 margin_right = 1172.5
 margin_bottom = 584.0
 custom_fonts/normal_font = SubResource( 14 )
-text = "Code172 v2.1 (2023-01-30)
+text = "Code172 v2.2 (2023-02-15)
 A simple and lightweight code editor made with Godot.
 © 2021-2023 Ihsan172. Licensed under the MIT License.
 

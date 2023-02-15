@@ -13,7 +13,7 @@ func _process(delta):
 	window_settings()
 	textedit_settings()
 	time()
-	unsaved_changes()
+	change_detector()
 
 
 func time():
@@ -56,9 +56,12 @@ func shortcuts():
 
 func window_settings():
 	if current_path == 'no path set':
-		OS.set_window_title('Code172 - Unsaved File')
+		OS.set_window_title('* Code172 - New File')
 	else:
-		OS.set_window_title('Code172' + ' - ' + current_path)
+		if saved == true:
+			OS.set_window_title('Code172' + ' - ' + current_path)
+		else:
+			OS.set_window_title('* Code172' + ' - ' + current_path)
 
 	OS.window_borderless = $Settings/TabContainer/Window/Borderless.pressed
 	OS.keep_screen_on = $Settings/TabContainer/Window/KeepScreenOn.pressed
@@ -174,12 +177,17 @@ func report_bug():
 	OS.shell_open('https://github.com/Ihsan172/Code172/issues/new')
 
 
-func unsaved_changes():
+func change_detector():
 	if $TextEdit.text == saved_code:
-		$ToolBar/UnsavedChanges.play("Saved")
-		$ToolBar/UnsavedChanges/Hint.hint_tooltip = "No unsaved changes"
+		$ToolBar/ChangeDetector.play("saved")
+		$ToolBar/ChangeDetector/Hint.hint_tooltip = "No unsaved changes"
 		saved = true
 	else:
-		$ToolBar/UnsavedChanges.play("Unsaved")
-		$ToolBar/UnsavedChanges/Hint.hint_tooltip = "Unsaved changes"
+		$ToolBar/ChangeDetector.play("unsaved")
+		$ToolBar/ChangeDetector/Hint.hint_tooltip = "Unsaved changes"
+		saved = false
+	
+	if current_path == 'no path set':
+		$ToolBar/ChangeDetector.play("unsaved")
+		$ToolBar/ChangeDetector/Hint.hint_tooltip = "Unsaved file"
 		saved = false
